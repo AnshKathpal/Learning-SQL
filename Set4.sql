@@ -14,20 +14,11 @@ LIMIT 1;
 
 SELECT driver_id, AVG(fare) AS average_fare, AVG(distance) AS average_distance
 FROM Rides
-GROUP BY driver_id;
+GROUP BY 1;
 
 -- Write a query to find driver_id that have completed more than 5 rides.
 
-SELECT driver_id, COUNT(*) AS ride_count
+SELECT 3, COUNT(*) AS ride_count
 FROM Rides
-GROUP BY driver_id
+GROUP BY 3
 HAVING COUNT(*) > 5;
-
--- Assuming there is another collection/table called Drivers with driver_id and name fields, write a query to find the name of the driver with the highest fare.
-
-SELECT d.name AS driver_name, MAX(r.fare) AS highest_fare
-FROM Rides r
-JOIN Drivers d ON r.driver_id = d.driver_id
-WHERE r.fare = (SELECT MAX(fare) FROM Rides);
-
--- - Write a query to find the top 3 drivers who have earned the most from fares. Return the drivers' ids and total earnings.

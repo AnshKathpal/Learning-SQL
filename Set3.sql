@@ -50,7 +50,7 @@ WHERE start_location LIKE '%Downtown%' OR end_location LIKE '%Downtown%';
 
 SELECT COUNT(*) AS ride_count
 FROM Rides
-WHERE driver_id = your_driver_id_here;
+WHERE driver_id = 2;
 
 -- Write a query to update the fare of the ride with id 4.
 
@@ -60,9 +60,9 @@ WHERE id = 4;
 
 -- Write a query to calculate the total fare for each driver_id.
 
-SELECT driver_id, SUM(fare) AS total_fare
+SELECT 3, SUM(fare) AS total_fare
 FROM Rides
-GROUP BY driver_id;
+GROUP BY 4;
 
 -- Write a query to delete the ride with id 2.
 
