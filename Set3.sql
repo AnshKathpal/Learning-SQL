@@ -55,7 +55,7 @@ WHERE driver_id = 2;
 -- Write a query to update the fare of the ride with id 4.
 
 UPDATE Rides
-SET fare = new_fare_value
+SET fare = 200
 WHERE id = 4;
 
 -- Write a query to calculate the total fare for each driver_id.
